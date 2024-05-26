@@ -14,18 +14,11 @@ export default function Technologies() {
                 <p className='max-w-[750px] text-lg text-muted-foreground sm:text-xl'>My everyday tech-stack</p>
             </div>
 
-            <div className="grid grid-cols-4 md:grid-cols-6 auto-rows-fr place-items-center border max-w-md">
-                <div className="col-span-full md:col-span-2 text-xl font-semibold flex items-center justify-center pl-5">
-                    Your framework, your way.
-                </div>
+            <div className="flex items-center justify-center gap-5">
                 {techStack.map(tech => (
-                    <div
-                        key={tech.name}
-                        className={`w-full aspect-square grid place-items-center grid-borders`}
-                    >
-                        {tech.icon}
-                    </div>
-                ))}</div>
+                    <i key={tech.name} className={`text-5xl ${tech.icon}`} />
+                ))}
+            </div>
         </section>
     )
 }

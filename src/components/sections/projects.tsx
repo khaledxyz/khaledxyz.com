@@ -48,7 +48,9 @@ export default function Projects() {
                                         <Button size='sm'>Read More</Button>
                                         {project.buttons.map((button, index) => (
                                             <Link key={index} href={button.path} target='_blank'>
-                                                <Button aria-label={button.ariaLabel} variant="outline" size="icon">{button.icon}</Button>
+                                                <Button aria-label={button.ariaLabel} variant="outline" size="icon">
+                                                    <i className={`text-md ${button.icon}`} />
+                                                </Button>
                                             </Link>
                                         ))}
                                     </CardFooter>
